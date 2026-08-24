@@ -1,0 +1,276 @@
+/* ======================================================
+   NKWEN TRADERS - style.css
+   TEAM: Cross-Project Titans - DESIGN LEAD
+   ====================================================== */
+
+/* 1. GOOGLE FONTS IMPORT - For nice headings and body text */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Inter:wght@400;500&display=swap');
+
+/* 2. COLORS AND DESIGN VARIABLES - Change colors here once, changes everywhere */
+:root {
+  --primary: #0D4F3B;      /* Main green for Nkwen Traders brand */
+  --accent: #FF8C00;       /* Orange for buttons and badges */
+  --dark: #111827;         /* Text color */
+  --gray: #6B7280;         /* Light text */
+  --border: #E5E7EB;       /* Border line color */
+  --bg: #F9FAFB;           /* Page background */
+  --white: #FFFFFF;        /* Card background */
+  --radius: 14px;          /* Round corner */
+  --shadow: 0 4px 20px rgba(0,0,0,0.06); /* Soft shadow */
+}
+
+/* 3. RESET - Remove browser default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 4. BODY - Main page style */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* 5. CONTAINER - Keeps content in the center */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 6. IMAGES AND LINKS - Make them clean */
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 7. NAVBAR - Top navigation menu */
+.navbar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky; /* Stays on top when scrolling */
+  top: 0;
+  z-index: 100;
+}
+
+.nav-inner {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 8. LOGO - NKWEN TRADERS logo text */
+.logo {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.logo span {
+  color: var(--accent); /* Second part of logo in orange */
+}
+
+/* 9. NAV LINKS - Home, Catalog, About, Contact */
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+/* 10. SECTION - Space for each part of page */
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;
+}
+
+/* 11. FILTER BAR - Buttons to filter products */
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0 30px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 18px;
+  border-radius: 100px; /* Pill shape */
+  border: 1px solid var(--border);
+  background: var(--white);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+/* 12. CATALOG GRID - Holds all product cards */
+.catalog-grid {
+  display: grid;
+  gap: 24px;
+}
+
+/* 13. PRODUCT CARD - Each product box */
+.product-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: 0.3s; /* Smooth hover */
+  display: flex;
+  flex-direction: column;
+}
+
+/* 14. PRODUCT CARD HOVER - Interactive feature */
+.product-card:hover {
+  transform: translateY(-5px); /* Moves up */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12); /* Bigger shadow */
+}
+
+/* 15. PRODUCT IMAGE - Image area */
+.product-img {
+  height: 220px;
+  background: #f3f4f6;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-img img {
+  height: 100%;
+  object-fit: cover; /* Image covers the box well */
+}
+
+/* 16. BADGE - NEW or SALE tag */
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--accent);
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* 17. PRODUCT INFO - Text under image */
+.product-info {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.category {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  margin: 6px 0;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: auto;
+}
+
+/* 18. FOOTER - Bottom part of website */
+.footer {
+  background: var(--dark);
+  color: #9CA3AF;
+  padding: 50px 0;
+  margin-top: 60px;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 40px;
+}
+
+.footer h4 {
+  color: var(--white);
+  margin-bottom: 16px;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* ======================================================
+   RESPONSIVENESS - 3 DEVICES ONLY
+   ====================================================== */
+
+/* 19. DESKTOP - Screen from 1025px and bigger (Computer) */
+@media (min-width: 1025px) {
+  .catalog-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+  }
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* 4 columns footer */
+  }
+}
+
+/* 20. TABLET - Screen from 641px to 1024px (iPad, Tablet) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .catalog-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 products per row */
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns footer */
+  }
+  .product-img {
+    height: 180px; /* Smaller image on tablet */
+  }
+}
+
+/* 21. MOBILE PHONE - Screen from 0px to 640px (Phone) */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px; /* Less padding on phone */
+  }
+  .nav-links {
+    display: none; /* Hide menu on phone - will be hamburger later */
+  }
+  .section {
+    padding: 35px 0;
+  }
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 products per row on phone */
+    gap: 12px;
+  }
+  .product-img {
+    height: 140px;
+  }
+  .product-info {
+    padding: 12px;
+  }
+  .title {
+    font-size: 0.9rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr; /* 1 column footer on phone */
+  }
+}
