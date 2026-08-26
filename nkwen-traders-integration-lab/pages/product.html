@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="View detailed product information from the Nkwen Traders catalogue."
+    >
+
+    <title>Nkwen Traders | Product Details</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/product.css"
+    >
+</head>
+
+<body>
+
+    <!-- ACCESSIBILITY -->
+
+    <a
+        class="skip-link"
+        href="#main-content"
+    >
+        Skip to content
+    </a>
+
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+        <nav
+            class="nav container"
+            aria-label="Primary navigation"
+        >
+
+            <a
+                class="brand"
+                href="../index.html"
+                aria-label="Nkwen Traders home"
+            >
+                <span
+                    class="brand-mark"
+                    aria-hidden="true"
+                >
+                    N
+                </span>
+
+                <span>
+                    Nkwen Traders
+                </span>
+            </a>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="products.html"
+                        aria-current="page"
+                    >
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <a
+                class="button button-accent"
+                href="products.html"
+            >
+                Browse products
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main id="main-content">
+
+        <section
+            class="product-page"
+            aria-labelledby="product-page-heading"
+        >
+
+            <div class="container">
+
+                <a
+                    class="back-link"
+                    href="products.html"
+                >
+                    ← Back to products
+                </a>
+
+
+                <!-- PRODUCT DETAILS -->
+
+                <div
+                    id="product-details"
+                    class="product-details"
+                    aria-live="polite"
+                >
+
+                    <div class="loading-state">
+                        <p>
+                            Loading product...
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT NOT FOUND -->
+
+                <div
+                    id="product-not-found"
+                    class="not-found hidden"
+                >
+
+                    <h1 id="product-page-heading">
+                        Product not found
+                    </h1>
+
+                    <p>
+                        Sorry, we couldn't find the product
+                        you are looking for.
+                    </p>
+
+                    <a
+                        class="button button-primary"
+                        href="products.html"
+                    >
+                        View all products
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTINUE BROWSING -->
+
+        <section
+            class="section related-products"
+            aria-labelledby="related-products-title"
+        >
+
+            <div class="container">
+
+                <p class="hero-eyebrow">
+                    Continue browsing
+                </p>
+
+                <h2 id="related-products-title">
+                    Explore more products.
+                </h2>
+
+                <p>
+                    Return to the catalogue to discover
+                    more products from Nkwen Traders.
+                </p>
+
+                <a
+                    class="button button-primary"
+                    href="products.html"
+                >
+                    Browse catalogue
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                <strong>
+                    Nkwen Traders
+                </strong>
+            </p>
+
+            <p>
+                Quality products. Trusted service.
+                A better local shopping experience.
+            </p>
+
+            <p>
+                &copy; 2026 Nkwen Traders —
+                Cross Track Titans.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script
+        type="module"
+        src="../js/product-details.js"
+    ></script>
+
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+
+/* ============================================================
+   NKWEN TRADERS — CATALOGUE
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f8f5;
+    color: #1d261f;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e8e4;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1d261f;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.brand-mark {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    background: #1d261f;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 24px;
+}
+
+.main-nav a {
+    color: #58615a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #1d261f;
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.catalogue-hero {
+    padding: 70px 0 45px;
+    background: #eef2ec;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+}
+
+.catalogue-hero h1 {
+    max-width: 720px;
+    margin: 12px 0;
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.05;
+}
+
+.catalogue-hero p {
+    max-width: 650px;
+    color: #626b64;
+    font-size: 18px;
+}
+
+
+/* ============================================================
+   CATALOGUE
+   ============================================================ */
+
+.catalogue-section {
+    padding: 45px 0 80px;
+}
+
+.catalogue-controls {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.catalogue-controls label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.search-box input,
+.filter-box select {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 14px;
+    border: 1px solid #d7ddd7;
+    border-radius: 10px;
+    background: #ffffff;
+    font: inherit;
+    color: #1d261f;
+    outline: none;
+}
+
+.search-box input:focus,
+.filter-box select:focus {
+    border-color: #1d261f;
+}
+
+.catalogue-meta {
+    margin-bottom: 20px;
+}
+
+.catalogue-meta p {
+    color: #69716b;
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   PRODUCT GRID
+   ============================================================ */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+
+/* ============================================================
+   PRODUCT CARD
+   ============================================================ */
+
+.product-card {
+    width: 100%;
+    min-width: 0;
+    background: #ffffff;
+    border: 1px solid #e4e8e4;
+    border-radius: 16px;
+    overflow: hidden;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(20, 30, 20, 0.08);
+}
+
+.product-image {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef2ec;
+    overflow: hidden;
+    padding: 4px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(1.50);
+    display: block;
+}
+
+/* ============================================================
+   PRODUCT CONTENT
+   ============================================================ */
+
+.product-content {
+    padding: 18px;
+}
+
+.product-category {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: #69716b;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.product-name {
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.product-price {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.product-link {
+    display: inline-block;
+    color: #1d261f;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.product-link:hover {
+    text-decoration: underline;
+}
+
+.product-currency {
+    color: #69716b;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+
+/* ============================================================
+   EMPTY STATE
+   ============================================================ */
+
+.empty-state {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.empty-state p {
+    margin: 8px 0 20px;
+    color: #69716b;
+}
+
+.empty-state button {
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 9px;
+    background: #1d261f;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.site-footer {
+    padding: 30px 0;
+    background: #1d261f;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .catalogue-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 220px;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .header-content {
+        flex-direction: column;
+        padding: 16px 0;
+    }
+
+    .catalogue-hero {
+        padding: 55px 0 40px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 240px;
+    }
+}
+
